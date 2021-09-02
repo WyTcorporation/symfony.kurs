@@ -1,0 +1,15 @@
+
+{% extends '@App/layout.html.twig' %}
+
+{% block title %}Home page{% endblock %}
+
+{% block body %}
+    <h1>Hello world1</h1>
+    {% for item  in categories %}
+        <a href="{{ path('list_by_category',{id:item.id}) }}">Product {{ item.id }}: {{ item.name }}</a><br>
+    {% endfor %}
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}

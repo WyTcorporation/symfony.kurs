@@ -1,0 +1,32 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block body %}
+    <h1>Feedback</h1>
+
+{#    {{ form(feedback_form) }}#}
+
+    {{ form_start(feedback_form) }}
+{#    https://symfony.com/doc/3.4/form/form_customization.html#}
+{#    {{ form_label(feedback_form.name) }}#}
+{#    {{ form_widget(feedback_form.name) }}#}
+{#    {{ form_errors(feedback_form.name) }}#}
+
+{#        {{ form_widget(feedback_form.name,{'attr':{'class':'form-control'}}) }}#}
+
+        {{ form_row(feedback_form.name) }}
+
+        {{ form_row(feedback_form.email) }}
+
+        {{ form_row(feedback_form.message) }}
+
+        {{ form_row(feedback_form.captcha) }}
+
+        {{ form_row(feedback_form.submit) }}
+
+    {{ form_end(feedback_form) }}
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
